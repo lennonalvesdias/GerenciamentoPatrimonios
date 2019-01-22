@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RecursosCompartilhados\4 - Infra\RecursosCompartilhados.Dados\RecursosCompartilhados.Dados.csproj" />
+    <ProjectReference Include="..\..\..\RecursosCompartilhados\4 - Infra\RecursosCompartilhados.DIConfiguration\RecursosCompartilhados.DIConfiguration.csproj" />
+    <ProjectReference Include="..\..\2 - Aplicacao\GP.Aplicacao\GP.Aplicacao.csproj" />
+    <ProjectReference Include="..\..\3 - Dominios\GP.Dominio\GP.Dominio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="connection.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
